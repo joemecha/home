@@ -37,7 +37,7 @@ class BuildingTest < Minitest::Test
     assert_equal [], building.renters
   end
 
-  def test_has_renters # TEST FAILS
+  def test_has_renters # FAILS -- STUCK HERE 
     unit1 = Apartment.new({number: "A1", monthly_rent: 1200, bathrooms: 1, bedrooms: 1})
     unit2 = Apartment.new({number: "B2", monthly_rent: 999, bathrooms: 2, bedrooms: 2})
     building = Building.new

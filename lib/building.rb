@@ -29,8 +29,8 @@ class Building
   end
 
   def renter_with_highest_rent
-    @renters.sort_by do |renter|
-    end 
-
+    @renters.max_by do |renter|
+      #unit.monthly_rent
+    end
   end
 end
