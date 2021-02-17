@@ -11,10 +11,10 @@ class Apartment
     @monthly_rent = data[:monthly_rent]
     @bathrooms = data[:bathrooms]
     @bedrooms = data[:bedrooms]
-    @renter = nil
+    @renter = data[:renter] = nil
   end
 
   def add_renter(renter)
-    @renter = renter
+    @renter = renter 
   end
-end 
+end

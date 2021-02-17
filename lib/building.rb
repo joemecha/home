@@ -1,14 +1,17 @@
 class Building
-  attr_reader :units, :renters
+  attr_reader :units, :renters, :rented_units
 
   def initialize
     @units = []
-    @renters = [] # How to keep nil until units added?
+    @renters = []
+    @rented_units = []
   end
 
-  def add_unit(apartment)
-    @units << apartment
-    # add_renter
+  def add_unit(unit)
+    @units << unit
+    if unit.renter != nil
+      @renters << unit.renter # Doesn't work
+    end
   end
 
   def average_rent
@@ -17,7 +20,17 @@ class Building
     end) / @units.length.to_f
   end
 
-  # def add_renter
-  #   @renters << @unit.renter
-  # end
+  def rented_units
+    @units.each do |unit|
+      unless unit.renter == nil
+        @rented_units << unit
+      end
+    end
+  end
+
+  def renter_with_highest_rent
+    @renters.sort_by do |renter|
+    end 
+
+  end
 end
