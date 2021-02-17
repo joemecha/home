@@ -49,4 +49,4 @@ class ApartmentTest < Minitest::Test
 
     assert_equal renter1, unit1.renter
   end
-end
+end 
